@@ -1,0 +1,16 @@
+<div class="border">
+	<div class="title">{{user.name}}</div>
+	<p class="name">{{user.role}}</p>
+	
+	<button (click)="toggleButton()">{{buttonName}}</button>
+
+	<div *ngIf="!isCollapsed">	
+		<p class="role">{{user.address}}</p>		
+		<div *ngIf="user.phone.length > 0">
+			<p class="label">Phone</p>
+			<div *ngFor="let i of user.phone">
+				<li class="phone">{{i}}</li> 			
+			</div>
+		</div>
+	</div>
+</div>
